@@ -2,24 +2,36 @@ body {
   font-family: 'Playfair Display', serif;
 }
 
-.navigation {
-  display: flex;
-  justify-content: center;
-  text-transform: uppercase;
-  margin-top: 77px;
+header {
+  padding-top: 77px;
+  padding-bottom: 96px;
 }
 
-.nav_item:not(:last-child) {
+.container {
+  width: 910px;
+  margin: 0 auto;
+}
+
+.navigation {
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.list_item {
+  display: inline-block;
+}
+
+.list_item, .article_content {
+  font-size: 14px;
+  line-height: 24px;
+}
+
+.list_item:not(:last-child) {
   margin-right: 87px;
 }
 
-.nav_item {
-  text-align: center;
-}
-
-.nav_item:hover {
+.list_item:hover {
   color: #03a9f4;
-  cursor: pointer;
 }
 
 .article_hdr {
@@ -36,11 +48,6 @@ h2 {
   margin-bottom: 30px;
 }
 
-.nav_item, .article_content {
-  font-size: 14px;
-  line-height: 24px;
-}
-
 .navigation, h2, .article_content {
   color: #626262;
 }
@@ -48,25 +55,32 @@ h2 {
 img {
   height: 280px;
   margin-bottom: 30px;
+  display: block;
+  width: 420px;
 }
 
 .article {
   width: 420px;
-  margin-top: 105px;
+  display: inline-block;
+  text-align: justify;
+}
+
+.article:nth-child(n+3) {
+  padding-top: 130px;
 }
 
 .article:nth-child(odd) {
-  margin-right: 62px;
+  margin-right: 60px;
 }
 
-.main-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+.main-section {
+  padding-bottom: 92px;
+  text-align: center;
 }
 
 .btn {
   padding: 22px 34px;
+  margin-top: 56px;
   background-color: #fff;
   color: #626262;
   font-size: 20px;
@@ -79,10 +93,4 @@ img {
   cursor: pointer;
   color: #03a9f4;
   border: 1px solid #03a9f4;
-}
-
-.btn_wrap {
-  text-align: center;
-  margin-top: 56px;
-  margin-bottom: 92px;
 }
