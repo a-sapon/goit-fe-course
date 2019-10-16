@@ -10,7 +10,10 @@ header {
 .container {
   width: 900px;
   margin: 0 auto;
-  padding-bottom: 92px;
+}
+
+.main-section {
+  margin-bottom: 56px;
   font-size: 0;
   text-align: center;
 }
@@ -48,7 +51,7 @@ header {
   width: 420px;
   display: inline-block;
   text-align: justify;
-  margin-bottom: 130px;
+  margin-bottom: 60px;
 }
 
 .article:nth-child(odd) {
@@ -99,8 +102,4 @@ img {
   cursor: pointer;
   color: #03a9f4;
   border: 1px solid #03a9f4;
-}
-
-.main-section {
-  margin-bottom: 56px;
 }
