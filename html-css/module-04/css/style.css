@@ -9,28 +9,35 @@ body {
 }
 
 .main_container {
-  width: 1170px;
+  width: 1110px;
   margin: 0 auto;
 }
 
 .navigation {
+  width: 1110px;
   padding-top: 40px;
-  padding-left: 30px;
-  padding-right: 30px;
-  margin-bottom: 104px;
+  padding-bottom: 104px;
 }
 
 .logo {
-  background-image: url(../img/logo.png);
   display: block;
-  width: 78px;
-  height: 22px;
-  background-repeat: no-repeat;
   float: left;
+  text-transform: uppercase;
+  font-size: 30px;
+  color: #555252;
+}
+
+.logo::first-letter {
+  color: #1abc9c;
+  font-weight: 900;
 }
 
 .nav_bar {
   float: right;
+}
+
+a {
+  display: block;
 }
 
 .nav_bar-item {
@@ -51,10 +58,9 @@ body {
 }
 
 .secttion_wraper {
+  width: 1110px;
   text-align: center;
   padding-bottom: 46px;
-  padding-left: 30px;
-  padding-right: 30px;
 }
 
 h2 {
@@ -76,8 +82,8 @@ h2::after {
   margin-top: 32px;
 }
 
-.product_list {
-  margin-top: 92px;
+.product_hdr {
+  margin-bottom: 92px;
 }
 
 .product_list-item {
@@ -88,6 +94,17 @@ h2::after {
 .product_img {
   width: 254px;
   height: 282px;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  }
+
+.product_list-item:hover {
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+  cursor: pointer;
 }
 
 .product_list-item:not(:nth-child(4n)) {
@@ -103,10 +120,10 @@ h2::after {
   height: 40px;
   background: linear-gradient(
     90deg,
-    #323232 0%,
-    #323232 79%,
-    #8c8c8c 79%,
-    #8c8c8c 100%
+    rgb(50, 50, 50) 0%,
+    rgb(50, 50, 50) 79%,
+    rgba(50, 50, 50, 0.4) 79%,
+    rgba(50, 50, 50, 0.4) 100%
   );
   color: #ffffff;
   font-family: "Roboto", sans-serif;
@@ -119,10 +136,10 @@ h2::after {
 .product_list-text:hover {
   background: linear-gradient(
     90deg,
-    #1abc9c 0%,
-    #1abc9c 79%,
-    #7fd9c7 79%,
-    #7fd9c7 100%
+    rgb(26, 188, 156) 0%,
+    rgb(26, 188, 156) 79%,
+    rgba(26, 188, 156, 0.4) 79%,
+    rgba(26, 188, 156, 0.4) 100%
   );
   cursor: pointer;
 }
@@ -136,12 +153,12 @@ h2::after {
   color: #ffffff;
 }
 
-.news_section {
-  padding-top: 100px;
+.product_section {
+  margin-bottom: 100px;
 }
 
-.news_list {
-  margin-top: 80px;
+.news_hdr {
+  margin-bottom: 80px;
 }
 
 .news_list-item {
@@ -157,6 +174,7 @@ h2::after {
 .news_img {
   width: 350px;
   height: 262px;
+  margin-bottom: 14px;
 }
 
 h3 {
@@ -166,7 +184,6 @@ h3 {
   color: #555252;
   font-weight: 600;
   text-align: left;
-  padding-top: 14px;
 }
 
 h3::after {
@@ -176,10 +193,10 @@ h3::after {
   width: 136px;
   background-color: #4ec6ab;
   margin-top: 10px;
+  margin-bottom: 26px;
 }
 
 .news-text {
-  padding-top: 26px;
   padding-bottom: 12px;
   font-size: 14px;
   line-height: 26px;
@@ -189,7 +206,6 @@ h3::after {
 }
 
 .btn {
-  border: none;
   width: 160px;
   height: 50px;
   border-radius: 3px;
@@ -197,9 +213,10 @@ h3::after {
   color: #ffffff;
   font-family: "Open Sans", sans-serif;
   font-size: 16px;
+  text-align: center;
+  line-height: 50px;
 }
 
 .btn:hover {
-  cursor: pointer;
   background-color: #7fd9c7;
 }
