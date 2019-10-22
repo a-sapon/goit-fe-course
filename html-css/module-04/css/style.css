@@ -1,10 +1,10 @@
 body {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 
 .clearfix::after {
   display: table;
-  content: '';
+  content: "";
   clear: both;
 }
 
@@ -35,7 +35,7 @@ body {
 
 .nav_bar-item {
   float: left;
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
   font-size: 14px;
   line-height: 11px;
   color: #515151;
@@ -53,10 +53,12 @@ body {
 .secttion_wraper {
   text-align: center;
   padding-bottom: 46px;
+  padding-left: 30px;
+  padding-right: 30px;
 }
 
 h2 {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   font-size: 48px;
   line-height: 32px;
   color: #515151;
@@ -65,7 +67,7 @@ h2 {
 }
 
 h2::after {
-  content: '';
+  content: "";
   display: block;
   height: 7px;
   width: 164px;
@@ -79,32 +81,63 @@ h2::after {
 }
 
 .product_list-item {
-  display: inline-block;
   float: left;
   width: 254px;
+}
+
+.product_img {
+  width: 254px;
   height: 282px;
-  background-color: #e9f0fd;
-  background-size: contain;
-  line-height: 254px;
-  text-align: center;
 }
 
 .product_list-item:not(:nth-child(4n)) {
   margin-right: 30px;
 }
 
-.product_list-item:not(:nth-last-child(-n + 3)) {
-  margin-bottom: 100px;
+.product_list-item:not(:nth-last-child(-n + 4)) {
+  margin-bottom: 30px;
 }
 
-img {
-  vertical-align: middle;
+.product_list-text {
+  width: 254px;
+  height: 40px;
+  background: linear-gradient(
+    90deg,
+    #323232 0%,
+    #323232 79%,
+    #8c8c8c 79%,
+    #8c8c8c 100%
+  );
+  color: #ffffff;
+  font-family: "Roboto", sans-serif;
+  font-size: 18px;
+  font-weight: 900;
+  text-transform: uppercase;
+  padding: 12px 12px;
+}
+
+.product_list-text:hover {
+  background: linear-gradient(
+    90deg,
+    #1abc9c 0%,
+    #1abc9c 79%,
+    #7fd9c7 79%,
+    #7fd9c7 100%
+  );
+  cursor: pointer;
 }
 
 .product_list-name {
-  width: 40px;
-  height: 40px;
-  display: inline-block;
+  float: left;
+}
+
+.product_list-price {
+  float: right;
+  color: #ffffff;
+}
+
+.news_section {
+  padding-top: 100px;
 }
 
 .news_list {
@@ -127,7 +160,7 @@ img {
 }
 
 h3 {
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
   font-size: 18px;
   line-height: 26px;
   color: #555252;
@@ -137,7 +170,7 @@ h3 {
 }
 
 h3::after {
-  content: '';
+  content: "";
   display: block;
   height: 3px;
   width: 136px;
@@ -162,7 +195,11 @@ h3::after {
   border-radius: 3px;
   background-color: rgb(78, 198, 171);
   color: #ffffff;
-  cursor: pointer;
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
   font-size: 16px;
+}
+
+.btn:hover {
+  cursor: pointer;
+  background-color: #7fd9c7;
 }
