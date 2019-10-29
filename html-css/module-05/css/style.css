@@ -1,0 +1,324 @@
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+.clearfix::after {
+  display: table;
+  content: "";
+  clear: both;
+}
+
+.navigation {
+  margin: 0 auto;
+  width: 1110px;
+  padding-top: 40px;
+  padding-bottom: 36px;
+}
+
+.logo {
+  display: block;
+  float: left;
+  text-transform: uppercase;
+  font-size: 30px;
+  color: #555252;
+}
+
+.logo::first-letter {
+  color: #1abc9c;
+  font-weight: 900;
+}
+
+.nav_bar {
+  float: right;
+}
+
+a {
+  display: block;
+}
+
+.nav_bar-item {
+  float: left;
+  font-family: "Open Sans", sans-serif;
+  font-size: 14px;
+  line-height: 11px;
+  color: #515151;
+  text-transform: uppercase;
+  font-weight: 800;
+}
+.nav_bar-item:not(:last-child) {
+  margin-right: 30px;
+}
+
+.nav_bar-item a:hover {
+  color: #1abc9c;
+}
+
+.section_wraper {
+  text-align: center;
+  padding-bottom: 98px;
+  background-color: #e9f0fd;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  }
+
+.banner {
+  min-height: 600px;
+  background-image: linear-gradient(to right,
+    rgba(0, 0, 2, .5),
+    rgba(0, 0, 2, .5)),
+    url(../img/banner.png);
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  margin-bottom: 96px;
+}
+
+.carousel {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #ffffff;
+  text-transform: uppercase;
+  font-family: "Roboto", sans-serif;
+  width: 1110px;
+}
+
+.carousel-hdr {
+  font-size: 60px;
+  font-weight: 900;
+  padding-bottom: 30px;
+}
+
+.carousel-para {
+  font-size: 24px;
+  font-weight: 300;
+}
+
+.btn-next {
+  height: 104px;
+  width: 104px;
+  top: 50%;
+  border: none;
+  background-color: #4ec6ab;
+  opacity: 0.651;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  cursor: pointer;
+  position: absolute;
+}
+
+button.back {
+  left: 0;
+  transform: translateY(-50%);
+  background-image: url(../img/arrow-back.png);
+}
+
+button.next {
+  right: 0;
+  transform: translateY(-50%);
+  background-image: url(../img/arrow-next.png);
+}
+
+.btn-next, .carousel-text {
+  float: left;
+}
+
+.carousel-text {
+  text-align: left;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 790px;
+}
+
+.btn-next:hover {
+  background-color: #1abc9c;
+  opacity: 1;
+}
+
+.collection {
+  width: 1110px;
+  text-align: center;
+  padding-bottom: 100px;
+  margin: 0 auto;
+}
+
+h3 {
+  font-family: "Roboto", sans-serif;
+  font-size: 48px;
+  line-height: 32px;
+  color: #515151;
+  text-transform: uppercase;
+  font-weight: 900;
+}
+
+h3::after {
+  content: "";
+  display: block;
+  height: 7px;
+  width: 164px;
+  background-color: #1abc9c;
+  margin: 0 auto;
+  margin-top: 32px;
+}
+
+.product_hdr {
+  margin-bottom: 80px;
+}
+
+.product_list-item {
+  float: left;
+  width: 255px;
+  position: relative;
+}
+
+.product_img {
+  width: 255px;
+  height: 282px;
+}
+
+/* ----------Overlay Hover Effects---------- */
+.overlay {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  width: 235px;
+  height: 261px;
+  background-color: rgba(0, 0, 0, .5);
+}
+
+.overlay-icons {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 168px;
+  height: 109px;
+}
+
+.overlay-icons a, .add-icon {
+  display: inline-block;
+  float: left;
+  width: 50px;
+  height: 50px;
+  border: 1px solid #ffffff;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+}
+
+.overlay-icon {
+  margin-right: 9px;
+  margin-bottom: 9px;
+}
+
+.like {
+  background-image: url(../img/like-icon.png);
+}
+.shuffle {
+  background-image: url(../img/shuffle-icon.png);
+}
+.time {
+  background-image: url(../img/time-icon.png);
+  margin-right: 0;
+}
+
+a.add {
+  width: 168px;
+  color: #ffffff;
+  line-height: 50px;
+  font-family: "Roboto", sans-serif;
+  font-size: 14px;
+  text-transform: uppercase;
+  font-weight: 400;
+  padding-right: 22px;
+  background-color: #323232;
+}
+
+.add-icon {
+  border: none;
+  background-image: url(../img/cart-icon.png);
+}
+
+.overlay-icons a:hover {
+  background-color: #1abc9c;
+}
+
+.overlay {
+  opacity: 0;
+}
+.product_list-item:hover .overlay {
+  opacity: 1;
+}
+/* ----------Overlay Hover Effects---------- */
+
+.product_list-item:not(:nth-child(4n)) {
+  margin-right: 30px;
+}
+
+.product_list-text {
+  width: 255px;
+  height: 40px;
+  background: linear-gradient(
+    90deg,
+    rgb(50, 50, 50) 0%,
+    rgb(50, 50, 50) 79%,
+    rgba(50, 50, 50, 0.4) 79%,
+    rgba(50, 50, 50, 0.4) 100%
+  );
+  color: #ffffff;
+  font-family: "Roboto", sans-serif;
+  font-size: 18px;
+  font-weight: 900;
+  text-transform: uppercase;
+  padding: 12px 12px;
+}
+
+.product_list-item:hover {
+  cursor: pointer;
+}
+.product_list-item:hover .product_list-text {
+  background: linear-gradient(
+    90deg,
+    rgb(26, 188, 156) 0%,
+    rgb(26, 188, 156) 79%,
+    rgba(26, 188, 156, 0.4) 79%,
+    rgba(26, 188, 156, 0.4) 100%
+  );
+  cursor: pointer;
+}
+
+.product_list-name {
+  float: left;
+}
+
+.product_list-price {
+  float: right;
+  color: #ffffff;
+}
+
+footer {
+  text-align: center;
+  height: 88px;
+  background-color: #323232;
+  color: #ffffff;
+  line-height: 88px;
+}
+
+footer > span:first-child {
+  border-right: 2px solid #ffffff;
+  padding-right: 8px;
+}
+
+footer > span:nth-child(2) {
+  padding-left: 4px;
+}
+
+footer > span:last-child {
+  color: #7fd9c7;
+}
