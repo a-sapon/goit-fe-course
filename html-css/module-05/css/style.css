@@ -202,7 +202,7 @@ h3::after {
   height: 109px;
 }
 
-.overlay-icons a, .add-icon {
+.overlay-icons button, .add-icon {
   display: inline-block;
   float: left;
   width: 50px;
@@ -210,6 +210,7 @@ h3::after {
   border: 1px solid #ffffff;
   background-repeat: no-repeat;
   background-position: 50% 50%;
+  background-color: transparent;
 }
 
 .overlay-icon {
@@ -228,7 +229,7 @@ h3::after {
   margin-right: 0;
 }
 
-a.add {
+button.add {
   width: 168px;
   color: #ffffff;
   line-height: 50px;
@@ -245,8 +246,9 @@ a.add {
   background-image: url(../img/cart-icon.png);
 }
 
-.overlay-icons a:hover {
+.overlay-icons button:hover {
   background-color: #1abc9c;
+  cursor: pointer;
 }
 
 .overlay {
