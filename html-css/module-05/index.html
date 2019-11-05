@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <link rel="stylesheet" href="./css/normalize.css" />
     <link
-      href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,800&display=swap"
+      href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700&display=swap"
       rel="stylesheet"
     />
     <link
@@ -17,39 +17,49 @@
     <title>module-05</title>
   </head>
   <body>
-    <div class="main_container">
-      <header>
-        <nav class="navigation clearfix">
-          <a href="#" class="logo">mart</a>
-          <ul class="nav_bar clearfix">
-            <li class="nav_bar-item"><a href="#">home</a></li>
-            <li class="nav_bar-item"><a href="#">about us</a></li>
-            <li class="nav_bar-item"><a href="#">page</a></li>
-            <li class="nav_bar-item"><a href="#">shop</a></li>
-            <li class="nav_bar-item"><a href="#">blog</a></li>
-            <li class="nav_bar-item"><a href="#">contact us</a></li>
-          </ul>
-        </nav>
-      </header>
-      <main class="section_wraper">
-        <section class="carousel_wraper">
-          <div class="banner">
-            <div class="carousel clearfix">
-              <button href="#" class="btn-next back"></button>
-              <div class="carousel-text">
-                <h2 class="carousel-hdr">affordable paris tours</h2>
-                <p class="carousel-para">
-                  city tours&#47;tour tickets&#47;tour guides
-                </p>
-              </div>
-              <button href="#" class="btn-next next"></button>
+    <header>
+      <nav class="navigation clearfix container">
+        <a href="#" class="logo">mart</a>
+        <ul class="nav_bar clearfix">
+          <li class="nav_bar-item"><a href="#">home</a></li>
+          <li class="nav_bar-item"><a href="#">about us</a></li>
+          <li class="nav_bar-item"><a href="#">page</a></li>
+          <li class="nav_bar-item"><a href="#">shop</a></li>
+          <li class="nav_bar-item"><a href="#">blog</a></li>
+          <li class="nav_bar-item"><a href="#">contact us</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main class="section_wraper">
+      <section class="carousel_wraper">
+        <div class="banner">
+          <div class="carousel clearfix container">
+            <button class="btn-next back">
+              <span class="visually-hidden">back</span>
+            </button>
+            <div class="carousel-text">
+              <h2 class="carousel-hdr">affordable paris tours</h2>
+              <p class="carousel-para">
+                city tours&#47;tour tickets&#47;tour guides
+              </p>
             </div>
+            <button class="btn-next next">
+              <span class="visually-hidden">next</span>
+            </button>
           </div>
-        </section>
-        <section class="collection">
-          <h3 class="product_hdr">new collection</h3>
-          <ul class="product_list clearfix">
-            <li class="product_list-item">
+        </div>
+      </section>
+      <section class="collection container">
+        <h3 class="product_hdr">new collection</h3>
+        <ul class="product_list clearfix">
+          <li class="product_list-item">
+            <div class="overlay_wrapper">
+              <img
+                width="255"
+                height="282"
+                src="./img/product1.png"
+                alt="product image"
+              />
               <div class="overlay">
                 <div class="overlay-icons">
                   <button class="overlay-icon like"></button>
@@ -61,19 +71,20 @@
                   </button>
                 </div>
               </div>
-              <a href="#"
-                ><img
-                  class="product_img"
-                  src="./img/product1.png"
-                  alt="product image"
-                />
-                <div class="product_list-text">
-                  <p class="product_list-name">blue tshirt</p>
-                  <p class="product_list-price">&#36;26</p>
-                </div>
-              </a>
-            </li>
-            <li class="product_list-item">
+            </div>
+            <a href="#" class="product_list-text">
+              <h4 class="product_list-name">blue tshirt</h4>
+              <h4 class="product_list-price">&#36;26</h4>
+            </a>
+          </li>
+          <li class="product_list-item">
+            <div class="overlay_wrapper">
+              <img
+                width="255"
+                height="282"
+                src="./img/product2.png"
+                alt="product image"
+              />
               <div class="overlay">
                 <div class="overlay-icons">
                   <button class="overlay-icon like"></button>
@@ -85,19 +96,20 @@
                   </button>
                 </div>
               </div>
-              <a href="#"
-                ><img
-                  class="product_img"
-                  src="./img/product2.png"
-                  alt="product image"
-                />
-                <div class="product_list-text">
-                  <p class="product_list-name">woman shirt</p>
-                  <p class="product_list-price">&#36;31</p>
-                </div>
-              </a>
-            </li>
-            <li class="product_list-item">
+            </div>
+            <a href="#" class="product_list-text">
+              <h4 class="product_list-name">woman shirt</h4>
+              <h4 class="product_list-price">&#36;31</h4>
+            </a>
+          </li>
+          <li class="product_list-item">
+            <div class="overlay_wrapper">
+              <img
+                width="255"
+                height="282"
+                src="./img/product3.png"
+                alt="product image"
+              />
               <div class="overlay">
                 <div class="overlay-icons">
                   <button class="overlay-icon like"></button>
@@ -109,19 +121,20 @@
                   </button>
                 </div>
               </div>
-              <a href="#"
-                ><img
-                  class="product_img"
-                  src="./img/product3.png"
-                  alt="product image"
-                />
-                <div class="product_list-text">
-                  <p class="product_list-name">yellow tshirt</p>
-                  <p class="product_list-price">&#36;21</p>
-                </div>
-              </a>
-            </li>
-            <li class="product_list-item">
+            </div>
+            <a href="#" class="product_list-text">
+              <h4 class="product_list-name">yellow tshirt</h4>
+              <h4 class="product_list-price">&#36;21</h4>
+            </a>
+          </li>
+          <li class="product_list-item">
+            <div class="overlay_wrapper">
+              <img
+                width="255"
+                height="282"
+                src="./img/product4.png"
+                alt="product image"
+              />
               <div class="overlay">
                 <div class="overlay-icons">
                   <button class="overlay-icon like"></button>
@@ -133,26 +146,19 @@
                   </button>
                 </div>
               </div>
-              <a href="#"
-                ><img
-                  class="product_img"
-                  src="./img/product4.png"
-                  alt="product image"
-                />
-                <div class="product_list-text">
-                  <p class="product_list-name">cool lingerie</p>
-                  <p class="product_list-price">&#36;56</p>
-                </div>
-              </a>
-            </li>
-          </ul>
-        </section>
-      </main>
-      <footer>
-        <span>All Rights Reserved &copy; Dokan</span>
-        <span>Designed</span>
-        <span>ThemenGraph</span>
-      </footer>
-    </div>
+            </div>
+            <a href="#" class="product_list-text">
+              <h4 class="product_list-name">cool lingerie</h4>
+              <h4 class="product_list-price">&#36;56</h4>
+            </a>
+          </li>
+        </ul>
+      </section>
+    </main>
+    <footer>
+      <span>All Rights Reserved &copy; Dokan</span>
+      <span>Designed</span>
+      <span>ThemenGraph</span>
+    </footer>
   </body>
 </html>
