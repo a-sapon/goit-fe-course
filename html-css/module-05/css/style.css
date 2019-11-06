@@ -157,7 +157,7 @@ button.next {
   padding-bottom: 100px;
 }
 
-h3 {
+.product_hdr {
   font-family: "Roboto", sans-serif;
   font-size: 48px;
   line-height: 32px;
@@ -166,7 +166,7 @@ h3 {
   font-weight: 900;
 }
 
-h3::after {
+.product_hdr::after {
   content: "";
   display: block;
   height: 7px;
@@ -308,7 +308,7 @@ button.add {
   color: #ffffff;
 }
 
-footer {
+.footer {
   text-align: center;
   height: 88px;
   background-color: #323232;
@@ -316,16 +316,17 @@ footer {
   line-height: 88px;
 }
 
-footer > span:first-child {
+.footer > span:first-child {
   border-right: 2px solid #ffffff;
   padding-right: 8px;
 }
 
-footer > span:nth-child(2) {
+.footer > span:nth-child(2) {
   padding-left: 4px;
 }
 
-footer > span:last-child {
+.footer a {
+  display: inline-block;
   color: #7fd9c7;
 }
 
