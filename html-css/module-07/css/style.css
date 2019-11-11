@@ -135,7 +135,6 @@ textarea {
   font-family: var(--font-hdr);
   font-size: 0.875rem;
   color: #bbbbbb;
-  text-transform: uppercase;
 }
 
 input[type="text"],
@@ -152,7 +151,13 @@ textarea {
 
 input[required]:valid,
 textarea[required]:valid {
-  outline: 1px solid #01cf00;
+  outline: 2px solid #01cf00;
+}
+
+input[required]:invalid,
+textarea[required]:invalid {
+  outline: 2px solid #ff1919;
+  outline-style: groove;
 }
 
 input[type="text"]:focus,
@@ -161,11 +166,10 @@ textarea:focus {
   outline-offset: 0;
 }
 
-input[required]:invalid,
-textarea[required]:invalid {
-  outline: 1px solid #ff1919;
-  outline-style: groove;
-  /* outline-radius? */
+input[type="text"]::placeholder,
+input[type="email"]::placeholder,
+textarea::placeholder {
+  text-transform: uppercase;
 }
 
 .form-btn {
