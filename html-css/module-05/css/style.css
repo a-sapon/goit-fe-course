@@ -40,6 +40,7 @@ a {
 }
 
 .nav_bar-item {
+  position: relative;
   float: left;
   font-family: "Open Sans", sans-serif;
   font-size: 14px;
@@ -51,9 +52,40 @@ a {
 .nav_bar-item:not(:last-child) {
   margin-right: 30px;
 }
-
+.nav_bar-item a {
+  transition: color 200ms linear;
+}
 .nav_bar-item a:hover {
   color: #1abc9c;
+}
+
+.submenu {
+  display: inline-block;
+  position: absolute;
+  top: 16px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 10px;
+  border-radius: 2px;
+  font-family: "Open Sans", sans-serif;
+  font-size: 14px;
+  line-height: 17px;
+  background-color: #fcf3f7;
+  color: #515151;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 700;
+  z-index: 1;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 200ms, visibility 200ms;
+}
+.submenu-item:not(:last-child) {
+  margin-bottom: 16px;
+}
+.nav_bar-item:hover .submenu {
+  opacity: .8;
+  visibility: visible;
 }
 
 .section_wraper {
