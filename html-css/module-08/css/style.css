@@ -177,7 +177,7 @@ ul.partners {
   background-color: #4e73db;
 }
 
-@media (max-width: 320px) {
+@media (min-width: 320px) and (max-width: 767px) {
   li.person {
     margin-bottom: 30px;
   }
