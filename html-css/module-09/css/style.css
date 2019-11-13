@@ -4,9 +4,8 @@ img {
   height: auto;
 }
 
-.container {
-  width: 320px;
-  margin: 0 auto;
+a {
+  display: block;
 }
 
 .wrapper {
@@ -16,30 +15,16 @@ img {
       rgba(26, 25, 21, 0.1)
     ),
     url(../img/banner-mobile.jpg);
-  background-repeat: no-repeat;
   background-size: cover;
-  height: 540px;
+  background-repeat: no-repeat;
+  padding-top: 20px;
   margin-bottom: 70px;
 }
 
-.logo {
-  font-family: MontserratB, sans-serif;
-  font-size: 20px;
-  letter-spacing: 2px;
-  color: #ffffff;
-  text-transform: uppercase;
-  padding-top: 50px;
-  display: none;
-}
-
 .nav_bar {
-  display: flex;
-  justify-content: center;
-  padding-top: 20px;
-  padding-bottom: 114px;
-  color: #ffffff;
   font-family: MontserratB, sans-serif;
   font-size: 14px;
+  padding-bottom: 120px;
 }
 
 .nav_bar-item:first-child {
@@ -51,10 +36,17 @@ img {
   padding: 10px 16px;
   border: 2px solid #ffffff;
   border-radius: 24px;
+  box-sizing: border-box;
+  line-height: 1;
 }
 
-.first_section {
-  text-align: center;
+.logo {
+  font-family: MontserratB, sans-serif;
+  font-size: 20px;
+  letter-spacing: 2px;
+}
+
+.first-section {
   color: #ffffff;
   font-family: MontserratB, sans-serif;
 }
@@ -82,7 +74,6 @@ img {
   border: none;
   border-radius: 20px;
   background-color: #ff4e50;
-  color: #ffffff;
   width: 280px;
   height: 40px;
   font-family: MontserratB, sans-serif;
@@ -91,23 +82,17 @@ img {
   margin-bottom: 132px;
 }
 
-.second_section {
-  text-align: center;
-}
-
 .second-title {
-  padding: 0 24px;
-  padding-bottom: 14px;
+  padding: 0 24px 14px 24px;
   font-family: MontserratB, sans-serif;
   font-size: 22px;
   line-height: 26.5px;
   color: #333333;
 }
 
-.person-pic {
-  display: block;
-  margin: 0 auto;
-  margin-bottom: 20px;
+.pic-wrapper {
+  width: 120px;
+  margin: 0 auto 20px auto;
 }
 
 .person-name {
@@ -122,11 +107,8 @@ img {
   font-size: 14px;
   line-height: 17px;
   color: #666666;
-}
-
-ul.partners {
-  padding-left: 50px;
-  padding-right: 50px;
+  max-width: 220px;
+  margin: 0 auto 30px auto;
 }
 
 .btn-expand {
@@ -142,14 +124,10 @@ ul.partners {
   margin-bottom: 40px;
 }
 
-.pic-wrapper {
-  position: relative;
-}
-
 .pic-wrapper::after {
   position: absolute;
   top: 75%;
-  right: 25%;
+  right: 0;
   content: "";
   display: block;
   width: 37px;
@@ -177,12 +155,6 @@ ul.partners {
   background-color: #4e73db;
 }
 
-@media (min-width: 320px) and (max-width: 767px) {
-  li.person {
-    margin-bottom: 30px;
-  }
-}
-
 @media (min-width: 768px) {
   .container {
     width: 532px;
@@ -195,29 +167,8 @@ ul.partners {
         rgba(26, 25, 21, 0.2)
       ),
       url(../img/banner-tablet.jpg);
-    height: 700px;
+    padding-top: 46px;
   }
-
-  .logo {
-    display: block;
-  }
-  .subtitle {
-    display: none;
-  }
-
-  .navigation {
-    width: 700px;
-    padding-bottom: 152px;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-  }
-
-  .nav_bar {
-    padding-top: 38px;
-    padding-bottom: 0;
-  }
-
   .title {
     font-size: 52px;
     line-height: 62px;
@@ -237,28 +188,6 @@ ul.partners {
   .second-title {
     padding-bottom: 32px;
   }
-
-  .second_section {
-    width: 492px;
-  }
-
-  ul.partners {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    padding: 0;
-    margin-bottom: 40px;
-  }
-
-  li.person {
-    width: 234px;
-  }
-}
-
-@media (min-width: 768px) and (max-width: 1439px) {
-  li.person:not(:nth-last-child(-n + 2)) {
-    margin-bottom: 60px;
-  }
 }
 
 @media (min-width: 1200px) {
@@ -273,21 +202,5 @@ ul.partners {
         rgba(26, 25, 21, 0.2)
       ),
       url(../img/banner-desktop.jpg);
-  }
-
-  .navigation {
-    width: 940px;
-  }
-
-  span {
-    display: block;
-  }
-
-  .btn {
-    margin-bottom: 210px;
-  }
-
-  li.person {
-    width: 220px;
   }
 }
