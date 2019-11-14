@@ -156,10 +156,6 @@ a {
 }
 
 @media (min-width: 768px) {
-  .container {
-    width: 532px;
-  }
-
   .wrapper {
     background-image: linear-gradient(
         90deg,
@@ -191,10 +187,6 @@ a {
 }
 
 @media (min-width: 1200px) {
-  .container {
-    width: 940px;
-  }
-
   .wrapper {
     background-image: linear-gradient(
         90deg,
