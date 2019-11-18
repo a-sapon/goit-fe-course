@@ -1,0 +1,131 @@
+.wrapper {
+  background-image: -webkit-gradient(
+      linear,
+      left top,
+      left bottom,
+      from(rgba($pink, 0.9)),
+      to(rgba($yellow, 0.9))
+    ),
+    url(../images/banner.jpg);
+  background-image: -o-linear-gradient(
+      rgba($pink, 0.9),
+      rgba($yellow, 0.9)
+    ),
+    url(../images/banner.jpg);
+  background-image: linear-gradient(
+      rgba($pink, 0.9),
+      rgba($yellow, 0.9)
+    ),
+    url(../images/banner.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin-bottom: 46px;
+
+  @media (-webkit-min-device-pixel-ratio: 2),
+    (-o-min-device-pixel-ratio: 2/1),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    background-image: -webkit-gradient(
+        linear,
+        left top,
+        left bottom,
+        from(rgba($pink, 0.9)),
+        to(rgba($yellow, 0.9))
+      ),
+      url(../img/banner@2x.jpg);
+    background-image: -o-linear-gradient(
+        rgba($pink, 0.9),
+        rgba($yellow, 0.9)
+      ),
+      url(../img/banner@2x.jpg);
+    background-image: linear-gradient(
+        rgba($pink, 0.9),
+        rgba($yellow, 0.9)
+      ),
+      url(../img/banner@2x.jpg);
+  }
+}
+
+.navigation {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  margin-bottom: 80px;
+    
+  &_logo {
+    font-family: $font-hdr;
+    font-size: 30px;
+    font-weight: 700;
+    color: $white;
+    padding-top: 30px;
+
+    &:hover {
+      color: $yellow;
+    }
+  }
+}
+
+.nav_bar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-family: $font-hdr;
+  font-size: 14px;
+  font-weight: 400;
+  color: $white;
+  text-transform: uppercase;
+  padding-top: 40px;
+
+  &-item:not(:last-child) {
+    margin-right: 56px;
+  }
+
+  &-item a {
+    fill: $white;
+  }
+
+  &-item:hover a {
+    color: #fce38a;
+    fill: #fce38a;
+  }
+
+  &-item a::after {
+    @include pseudo();
+    height: 3px;
+    width: 100%;
+    margin-top: 12px;
+    background-color: transparent;
+  }
+
+  &-item a:hover::after {
+    background-color: #fce38a;
+  }
+}
+
+.hdr-title {
+  width: 830px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.btn-more {
+  border: 3px solid $white;
+  background-color: transparent;
+  width: 160px;
+  height: 40px;
+  cursor: pointer;
+  font-family: $font-hdr;
+  font-size: 14px;
+  font-weight: 700;
+  color: $white;
+  text-transform: uppercase;
+  margin-bottom: 230px;
+
+  &:hover {
+    color: $yellow;
+    border-color: $yellow;
+  }
+}

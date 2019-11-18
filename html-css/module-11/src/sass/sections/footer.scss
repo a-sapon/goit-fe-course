@@ -1,0 +1,54 @@
+.footer {
+  @include center-flex('ver');
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  height: 63px;
+  border-top: 1px solid $light-grey;
+  font-family: $font-hdr;
+
+  &_left-side {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    font-size: 14px;
+
+    a {
+      color: $pink;
+      padding-left: 5px;
+    }
+  }
+
+  &_right-side {
+    width: 380px;
+    height: 40px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+
+  &-btn {
+    border: none;
+    width: 150px;
+    height: 100%;
+    background-color: $blue;
+    color: $white;
+    font-weight: 700;
+    text-transform: uppercase;
+    cursor: pointer;
+  }
+}
+
+input[type='text'] {
+  width: 230px;
+  height: 100%;
+  border: 1px solid $light-grey;
+  border-right: none;
+  padding: 12px;
+  font-family: $font-text;
+  font-weight: 300;
+  font-style: italic;
+  color: $input-color;
+  font-size: 15px;
+  line-height: 24px;
+}

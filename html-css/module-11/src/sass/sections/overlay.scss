@@ -1,0 +1,85 @@
+.overlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    from(rgba($pink, 0.9)),
+    to(rgba($yellow, 0.9))
+  );
+  background: -o-linear-gradient(
+    rgba($pink, 0.9),
+    rgba($yellow, 0.9)
+  );
+  background: linear-gradient(
+    rgba($pink, 0.9),
+    rgba($yellow, 0.9)
+  );
+  -webkit-box-shadow: 10px 10px $blue;
+  box-shadow: 10px 10px $blue;
+  opacity: 0;
+  -webkit-transition-property: opacity, -webkit-transform;
+  transition-property: opacity, -webkit-transform;
+  -o-transition-property: opacity, transform;
+  transition-property: opacity, transform;
+  transition-property: opacity, transform, -webkit-transform;
+  -webkit-transition-duration: 200ms;
+  -o-transition-duration: 200ms;
+  transition-duration: 200ms;
+  -webkit-transition-timing-function: linear;
+  -o-transition-timing-function: linear;
+  transition-timing-function: linear;
+
+  &-wrapper {
+    position: relative;
+
+    &:hover .overlay {
+      opacity: 1;
+      -webkit-transform: translate(-10px, -10px);
+      -ms-transform: translate(-10px, -10px);
+      transform: translate(-10px, -10px);
+      cursor: pointer;
+    }
+  }
+
+  &-icons {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  
+  &-icon {
+    width: 56px;
+    height: 56px;
+    background-color: $yellow;
+    margin-right: 1px;
+    opacity: 1;
+    @include center-flex('all');
+    fill: $pink;
+    cursor: pointer;
+    -webkit-transition-property: background-color, fill;
+    -o-transition-property: background-color, fill;
+    transition-property: background-color, fill;
+    -webkit-transition-duration: 200ms;
+    -o-transition-duration: 200ms;
+    transition-duration: 200ms;
+    -webkit-transition-timing-function: linear;
+    -o-transition-timing-function: linear;
+    transition-timing-function: linear;
+
+    &:hover {
+      background-color: $pink;
+      fill: $white;
+    }
+  }
+}
