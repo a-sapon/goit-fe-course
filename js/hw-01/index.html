@@ -1,20 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>hw-01</title>
-</head>
-<body>
-  <script src="task1.js"></script>
-  <script src="task2.js"></script>
-  <script src="task3.js"></script>
-  <script src="task4.js"></script>
-  <script src="task5.js"></script>
-  <script src="task6.js"></script>
-  <script type="text/javascript">
-    task1();
-  </script>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>hw-01</title>
+  </head>
+  <body>
+    <script src="task1.js"></script>
+    <script src="task2.js"></script>
+    <script src="task3.js"></script>
+    <script src="task4.js"></script>
+    <script src="task5.js"></script>
+    <script src="task6.js"></script>
+    <script type="text/javascript">
+      let message = prompt(
+        "Please enter the homework number that you'd like to check (1-6)"
+      );
+      switch (Number(message)) {
+        case 1:
+          task1();
+          break;
+        case 2:
+          task2();
+          break;
+        case 3:
+          task3();
+          break;
+        case 4:
+          task4();
+          break;
+        case 5:
+          task5();
+          break;
+        case 6:
+          task6();
+          break;
+        default:
+          alert('Not a valid input');
+      }
+    </script>
+  </body>
 </html>
