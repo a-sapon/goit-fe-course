@@ -1,3 +1,5 @@
+'use strict';
+
 function task4() {
   const credits = 23580;
   const pricePerDroid = 3000;

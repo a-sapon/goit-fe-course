@@ -1,3 +1,5 @@
+'use strict';
+
 function task1() {
   const name = 'Shield Generator';
   let price = 1000;

@@ -1,3 +1,5 @@
+'use strict';
+
 function task3() {
   let message = '';
   const askPassword = prompt('Please enter your password');

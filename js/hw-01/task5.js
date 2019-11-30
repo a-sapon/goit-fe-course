@@ -1,3 +1,5 @@
+'use strict';
+
 function task5() {
   const deliveryCountry = prompt(
     "Please enter your country where you'd like to receive your delivery."

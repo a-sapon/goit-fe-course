@@ -1,3 +1,5 @@
+'use strict';
+
 function task2() {
   const total = 100;
   const ordered = 50;

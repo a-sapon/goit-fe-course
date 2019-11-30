@@ -1,3 +1,5 @@
+'use strict';
+
 function task6() {
   let input;
   let total = 0;
