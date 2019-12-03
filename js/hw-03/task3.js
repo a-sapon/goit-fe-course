@@ -1,5 +1,3 @@
-'use strict';
-
 // VARIANT WITH Object.keys()
 // const findBestEmployee = employees => {
 //   const keys = Object.keys(employees);

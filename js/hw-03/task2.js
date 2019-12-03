@@ -1,5 +1,3 @@
-'use strict';
-
 const countProps = obj => {
   let keys = Object.keys(obj);
   let total = 0;
