@@ -14,7 +14,6 @@
 //   return `[${name}] is the most productive employee, who completed [${max}] tasks`;
 // };
 
-// ПОЧЕМУ ЕСЛИ Я УБИРАЮ ПЕРЕМЕННУЮ МАКС, ТО НЕ ЗАПИСЫВАЕТСЯ ПРАВИЛЬНОЕ ИМЯ
 // VARIANT WITH Object.entries()
 const findBestEmployee = employees => {
   const entries = Object.entries(employees);
