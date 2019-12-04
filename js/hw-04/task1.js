@@ -1,25 +1,25 @@
-'use strict';
-
-const arr = [9, 6, 7, 8, 3, 4, 5];
-const my_sort = _arr => {
-  let isArraySorted;
-  do {
-    isArraySorted = true;
-    for (let i = 0; i < _arr.length - 1; i++) {
-      if (_arr[i] > _arr[i + 1]) {
-        let temp = _arr[i + 1];
-        _arr[i + 1] = _arr[i];
-        _arr[i] = temp;
-        isArraySorted = false;
-        // break;
-      }
-    }
-  } while (!isArraySorted);
-  return [..._arr];
+const account = {
+  owner: 'Mango',
+  balance: 24000,
+  discount: 0.1,
+  orders: ['order-1', 'order-2', 'order-3'],
+  changeDiscount(value) {
+    this.discount = value;
+  },
+  showOrders() {
+    return this.orders;
+  },
+  addOrder(cost, order) {
+    this.balance -= cost;
+    this.orders.push(order);
+  }
 };
-const newArray = my_sort(arr);
-newArray[0] = '!!!';
-console.log(arr); // 3, 4, 5, 6, 7, 8
-console.log(newArray); // !!!, 4, 5, 6, 7, 8
 
-// решить другим методом сортировки
+account.changeDiscount(0.15);
+console.log(account.discount); // 0.15
+
+console.table(account.showOrders()); // ['order-1', 'order-2', 'order-3']
+
+account.addOrder(5000, 'order-4');
+console.log(account.balance); // 19000
+console.table(account.showOrders()); // ['order-1', 'order-2', 'order-3', 'order-4']
