@@ -21,12 +21,11 @@ const account = {
    * Принимает сумму и тип транзакции.
    */
   createTransaction(amount, type) {
-    const newTransaction = Object.assign({}, templateTransaction);
+    const newTransaction = {...templateTransaction};
     newTransaction.type = type;
     newTransaction.amount = amount;
     newTransaction.id = this.transactions.length;
     this.transactions.push(newTransaction);
-    // this.balance += type === Transaction.DEPOSIT ? amount : -amount;
     type === Transaction.DEPOSIT ? this.balance += amount : this.balance -= amount;
 
     return newTransaction;

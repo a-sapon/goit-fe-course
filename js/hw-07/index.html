@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>hw-07</title>
+  </head>
+  <body>
+    <section class="left">
+      <!------------------------ Task 1 ------------------------->
+      <ul id="categories">
+        <li class="item">
+          <h2>Животные</h2>
+          <ul>
+            <li>Кот</li>
+            <li>Хомяк</li>
+            <li>Лошадь</li>
+            <li>Попугай</li>
+          </ul>
+        </li>
+        <li class="item">
+          <h2>Продукты</h2>
+          <ul>
+            <li>Хлеб</li>
+            <li>Петрушка</li>
+            <li>Творог</li>
+          </ul>
+        </li>
+        <li class="item">
+          <h2>Технологии</h2>
+          <ul>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+            <li>React</li>
+            <li>Node</li>
+          </ul>
+        </li>
+      </ul>
+      <!-- ------------------------------------------------------>
+
+      <!------------------------ Task 2 ------------------------->
+      <ul id="ingredients"></ul>
+      <!-- ------------------------------------------------------>
+    </section>
+
+    <section class="right">
+      <!------------------------ Task 3 ------------------------->
+      <ul id="gallery"></ul>
+      <!-- ------------------------------------------------------>
+
+      <!------------------------ Task 4 ------------------------->
+      <div id="counter">
+        <button type="button" data-action="decrement">-1</button>
+        <span id="value">0</span>
+        <button type="button" data-action="increment">+1</button>
+      </div>
+      <!-- ------------------------------------------------------>
+
+      <!------------------------ Task 5 ------------------------->
+      <input type="text" placeholder="Ваше имя?" id="name-input" />
+      <h3>Привет, <span id="name-output">незнакомец</span>!</h3>
+
+      <style>
+        #name-input {
+          margin-top: 40px;
+        }
+      </style>
+      <!-- ------------------------------------------------------>
+
+      <!------------------------ Task 6 ------------------------->
+      <h3>Task 6</h3>
+      <input
+        type="text"
+        id="validation-input"
+        data-length="6"
+        placeholder="Введи 6 символов"
+      />
+
+      <style>
+        #validation-input {
+          border: 3px solid #bdbdbd;
+        }
+        #validation-input.valid {
+          border-color: #4caf50;
+        }
+        #validation-input.invalid {
+          border-color: #f44336;
+        }
+      </style>
+      <!-- ------------------------------------------------------>
+
+      <!------------------------ Task 7 ------------------------->
+      <section>
+        <h3>Task 7</h3>
+        <input id="font-size-control" type="range" min="10" max="40" />
+        <br />
+        <span id="text">Абракадабра!</span>
+
+        <style>
+          .paint {
+            color: red;
+            transition: color 500ms ease-in-out;
+          }
+        </style>
+      </section>
+      <!-- ------------------------------------------------------>
+    </section>
+
+    <style>
+      body {
+        display: flex;
+        justify-content: space-between;
+      }
+    </style>
+
+    <script src="./script.js" type="module"></script>
+  </body>
+</html>
