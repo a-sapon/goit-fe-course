@@ -7,13 +7,23 @@ const ingredients = [
   'Приправы'
 ];
 
-const addLi = function(arr) {
-  arr.forEach(element => {
-    const list = document.getElementById('ingredients');
-    const listItem = document.createElement('li');
-    listItem.innerText = element;
-    list.appendChild(listItem);
-  });
+const list = document.getElementById('ingredients');
+
+// const addLi = function(arr) {
+// let htmlToIncert = '';
+//   arr.forEach(element => {
+//     htmlToIncert += `<li>${element}</li>`
+//   });
+//   list.insertAdjacentHTML('afterbegin', htmlToIncert)
+// };
+
+// addLi(ingredients);
+
+const addLi = function(array) {
+  const htmlToInsert = array.reduce((acc, value) => {
+    return (acc += `<li>${value}</li>`);
+  }, '');
+  list.insertAdjacentHTML('afterbegin', htmlToInsert);
 };
 
 addLi(ingredients);

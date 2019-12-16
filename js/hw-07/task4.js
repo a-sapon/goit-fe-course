@@ -1,6 +1,8 @@
-const counterValue = document.getElementById('value');
-const decreaseBtn = document.querySelector("[data-action='decrement']");
-const increaseBtn = document.querySelector("[data-action='increment']");
+const refs = {
+  counterValue: document.getElementById('value'),
+  decreaseBtn: document.querySelector("[data-action='decrement']"),
+  increaseBtn: document.querySelector("[data-action='increment']")
+};
 
 class Counter {
   constructor(initValue = 0, step = 1) {
@@ -17,15 +19,15 @@ class Counter {
 
 const counter = new Counter();
 const updateValue = () => {
-  counterValue.textContent = counter.value;
+  refs.counterValue.textContent = counter.value;
 };
 
-increaseBtn.onclick = () => {
+refs.increaseBtn.onclick = () => {
   counter.increment();
   updateValue();
 };
 
-decreaseBtn.onclick = () => {
+refs.decreaseBtn.onclick = () => {
   counter.decrement();
   updateValue();
 };
@@ -34,14 +36,14 @@ decreaseBtn.onclick = () => {
 // let count = 0;
 // const increment = function(e) {
 //   count += 1;
-//   counterValue.textContent = count;
+//   refs.counterValue.textContent = count;
 // };
 
-// increaseBtn.addEventListener('click', increment);
+// refs.increaseBtn.addEventListener('click', increment);
 
 // const decrement = function(e) {
 //   count -= 1;
-//   counterValue.textContent = count;
+//   refs.counterValue.textContent = count;
 // };
 
-// decreaseBtn.addEventListener('click', decrement);
+// refs.decreaseBtn.addEventListener('click', decrement);
