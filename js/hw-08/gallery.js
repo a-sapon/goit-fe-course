@@ -1,12 +1,14 @@
 import galleryItems from './gallery-items.js';
 
-const galleryList = document.querySelector('.js-gallery');
-const lightbox = document.querySelector('.js-lightbox');
-const lightboxImage = document.querySelector('.lightbox__image');
-const closeBtn = document.querySelector('[data-action="close-lightbox"]');
+const refs = {
+  galleryList: document.querySelector('.js-gallery'),
+  lightbox: document.querySelector('.js-lightbox'),
+  lightboxImage: document.querySelector('.lightbox__image'),
+  closeBtn: document.querySelector('[data-action="close-lightbox"]')
+};
 
 const li = createLi(galleryItems);
-galleryList.insertAdjacentHTML('afterbegin', li);
+refs.galleryList.insertAdjacentHTML('afterbegin', li);
 
 function createLi(arr) {
   return arr.reduce((acc, currentItem) => {
@@ -14,7 +16,6 @@ function createLi(arr) {
         <li class="gallery__item">
           <a class="gallery__link" href="${currentItem.original}">
             <img
-            id='${currentItem.id}'
               class="gallery__image"
               src="${currentItem.preview}"
               data-source="${currentItem.original}"
@@ -26,9 +27,9 @@ function createLi(arr) {
   }, '');
 }
 
-galleryList.addEventListener('click', openImage);
-closeBtn.addEventListener('click', closeImage);
-lightbox.addEventListener('click', closeByOverlay);
+refs.galleryList.addEventListener('click', openImage);
+refs.closeBtn.addEventListener('click', closeImage);
+refs.lightbox.addEventListener('click', closeByOverlay);
 
 function openImage(e) {
   e.preventDefault();
@@ -38,18 +39,18 @@ function openImage(e) {
   const clickedImg = e.target;
   const bigURL = clickedImg.dataset.source;
   const alt = clickedImg.alt;
-  lightbox.classList.add('is-open');
-  lightboxImage.src = bigURL;
-  lightboxImage.alt = alt;
+  refs.lightbox.classList.add('is-open');
+  refs.lightboxImage.src = bigURL;
+  refs.lightboxImage.alt = alt;
 
   window.addEventListener('keydown', handleKeydown);
   window.addEventListener('keydown', handleArrow);
 }
 
 function closeImage() {
-  lightbox.classList.remove('is-open');
-  lightboxImage.src = '';
-  lightboxImage.alt = '';
+  refs.lightbox.classList.remove('is-open');
+  refs.lightboxImage.src = '';
+  refs.lightboxImage.alt = '';
 
   window.removeEventListener('keydown', handleKeydown);
   window.removeEventListener('keydown', handleArrow);
@@ -70,21 +71,22 @@ function handleKeydown(e) {
   }
 }
 
-let count = 1;
-
 function handleArrow(e) {
-  let step;
   if (e.code === 'ArrowLeft') {
-    step = count--;
+    const currentSrc = refs.lightboxImage.src;
+    const matchingObj = galleryItems.find(elem => elem.original === currentSrc);
+    let resultIdx = galleryItems.indexOf(matchingObj) - 1;
+    if (resultIdx < 0) {
+      resultIdx = galleryItems.length - 1;
+    }
+    refs.lightboxImage.src = galleryItems[resultIdx].original;
   } else if (e.code === 'ArrowRight') {
-    step = count++;
-  }
-  if (step > 0) {
-    const find = galleryItems.find(elem => {
-      const getId = elem.id === +e.target.children[0].id + step;
-      return getId;
-    });
-    const modal = document.querySelector('.lightbox__image');
-    modal.src = find.original;
+    const currentSrc = refs.lightboxImage.src;
+    const matchingObj = galleryItems.find(elem => elem.original === currentSrc);
+    let resultIdx = galleryItems.indexOf(matchingObj) + 1;
+    if (resultIdx > galleryItems.length - 1) {
+      resultIdx = 0;
+    }
+    refs.lightboxImage.src = galleryItems[resultIdx].original;
   }
 }
